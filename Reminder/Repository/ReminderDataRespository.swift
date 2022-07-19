@@ -18,7 +18,7 @@ protocol ReminderRepository {
 
 struct ReminderDataRepository: ReminderRepository {
     
-    /// Frtches a collection of data
+    /// Fetches a collection of data
     /// - Returns: Collection of Reminders
     func getAll() -> [Reminder]? {
         let result = PersistentStorage.shared.fetchManagedObject(managedObject: ReminderEntity.self)
